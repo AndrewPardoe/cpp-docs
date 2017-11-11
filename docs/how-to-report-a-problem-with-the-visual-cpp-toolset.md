@@ -207,27 +207,18 @@ CONTEXT:
  For this kind of crash please provide a [Link Repro](#link_repro) if you are using Link-Time Code Generation (LTCG) or a [Preprocessed Repro](#preprocessed_repro) if not. LTGC is enabled by the `/GL` command-line argument to cl.exe.  
   
 ##  <a name="send"></a> Ways to send your report  
- There are several ways to get your report to us. You can file a bug on Microsoft Connect, email us, or use Visual Studio's built-in Report a Problem Tool. The best choice for your report depends on the kind of problem you've encountered, how you want to interact with the engineers who will investigate your report, and whether you'd like to track its progress or share your report with the community.  
+ There are several ways to get your report to us. The preferred option is to use Visual Studio's built-in Report a Problem Tool. You can also send us email or file a bug on Microsoft Connect. The best choice for your report depends on the kind of problem you've encountered, how you want to interact with the engineers who will investigate your report, and whether you'd like to track its progress or share your report with the community.  
   
 > [!NOTE]
 >  Regardless of how you submit your report, Microsoft respects your privacy. For information about how we treat the data that you send us, see the [Microsoft Visual Studio Product Family Privacy Statement](https://www.visualstudio.com/dn948229).  
+
+### Use the Report a Problem tool  
+ The Report a Problem tool in Visual Studio is the preferred way for Visual Studio users to report a variety of problems with just a few clicks. It provides a simple form that you can use to specify detailed information about the problem you've encountered and then submit your report without ever leaving the IDE. For more information about Report a Problem see the [How to Report a Problem](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) documentation.
   
-### File a bug on Microsoft Connect  
- Microsoft Connect ([connect.microsoft.com](http://connect.microsoft.com)) is a way for our user community to connect directly to the teams that build Microsoft products. On Connect you can file new bugs and make feature requests, view other bugs and requests made by the community, and voice which ones are most important to you.  
-  
- Reporting your problem through Connect is best when you want share your report with the Visual Studio community and track its progress publicly; by sharing your report, others can sometimes provide work-arounds or additional information that can help us diagnose the problem. You can still use Connect if you want to keep your report private (such as when you can't share the code in your report), just make sure to set the visibility of your report to Private before you submit the form.  
-  
--   [Microsoft Connect: Report a problem with Visual Studio 2015 Update 3](https://connect.microsoft.com/VisualStudio/Feedback/LoadSubmitFeedbackForm?FormID=6493)  
-  
--   [Microsoft Connect: Report a problem with Visual Studio 2015 Update 2](https://connect.microsoft.com/VisualStudio/Feedback/LoadSubmitFeedbackForm?FormID=6406)  
-  
--   [Microsoft Connect: Report a problem with Visual Studio 2015 Update 1](https://connect.microsoft.com/VisualStudio/Feedback/LoadSubmitFeedbackForm?FormID=6326)  
-  
--   [Microsoft Connect: Report a problem with Visual Studio 2015](https://connect.microsoft.com/VisualStudio/Feedback/LoadSubmitFeedbackForm?FormID=6240)  
-  
- You can report a problem with other Visual Studio and .Net Framework products by locating the product in the drop-down on the [Visual Studio and .NET Framework feedback](https://connect.microsoft.com/VisualStudio/feedback/LoadSubmitFeedbackForm) Connect page.  
-  
-### Send an Email  
+> [!TIP]
+>  For other kinds of problems you might encounter in Visual Studio that are not related to the toolset (For example, UI issues, broken IDE functionality, or general crashes), the Report a Problem tool can be an especially good choice due to its screenshot capabilities and its ability to record UI actions that lead to the problem you've encountered. Microsoft connect can also be a good choice for reporting these other kinds of errors, but lacks the additional capabilities of the Report a Problem tool. You should never report these other kinds of errors by sending email to compilercrash@microsoft.com. 
+
+ ### Send an Email  
  Email is another way to send your report directly to the Visual C++ team; you can reach us at [compilercrash@microsoft.com](mailto:compilercrash@microsoft.com).  
   
  Reporting your problem through email lacks the rich community of Microsoft Connect, but can sometimes be better for large repros. It can also be the best or only option if your work environment is not connected to the internet or you are otherwise prevented from using Microsoft Connect.  
@@ -248,14 +239,21 @@ Problem description:
 Source code and repro steps:  
   
 ```  
+ 
+### File a bug on Microsoft Connect  
+ Microsoft Connect ([connect.microsoft.com](http://connect.microsoft.com)) is a way for our user community to connect directly to the teams that build Microsoft products. On Connect you can file new bugs and make feature requests, view other bugs and requests made by the community, and voice which ones are most important to you.  
   
-### Use the Report a Problem tool  
- The Report a Problem tool in Visual Studio is a way for Visual Studio users to report a variety of problems with just a few clicks. It provides a simple form that you can use to specify detailed information about the problem you've encountered and then submit your report without ever leaving the IDE.  
+ Reporting your problem through Connect is best when you want share your report with the Visual Studio community and track its progress publicly; by sharing your report, others can sometimes provide work-arounds or additional information that can help us diagnose the problem. You can still use Connect if you want to keep your report private (such as when you can't share the code in your report), just make sure to set the visibility of your report to Private before you submit the form.  
   
- Reporting your problem through the Report a Problem tool is unusual for the kinds of toolset problems discussed in this document; nevertheless, its an option you can choose if it suites your preferences.  
+-   [Microsoft Connect: Report a problem with Visual Studio 2015 Update 3](https://connect.microsoft.com/VisualStudio/Feedback/LoadSubmitFeedbackForm?FormID=6493)  
   
-> [!TIP]
->  For other kinds of problems you might encounter in Visual Studio that are not related to the toolset (For example, UI issues, broken IDE functionality, or general crashes), the Report a Problem tool can be an especially good choice due to its screenshot capabilities and its ability to record UI actions that lead to the problem you've encountered. Microsoft connect can also be a good choice for reporting these other kinds of errors, but lacks the additional capabilities of the Report a Problem tool. You should never report these other kinds of errors by sending email to compilercrash@microsoft.com.  
+-   [Microsoft Connect: Report a problem with Visual Studio 2015 Update 2](https://connect.microsoft.com/VisualStudio/Feedback/LoadSubmitFeedbackForm?FormID=6406)  
+  
+-   [Microsoft Connect: Report a problem with Visual Studio 2015 Update 1](https://connect.microsoft.com/VisualStudio/Feedback/LoadSubmitFeedbackForm?FormID=6326)  
+  
+-   [Microsoft Connect: Report a problem with Visual Studio 2015](https://connect.microsoft.com/VisualStudio/Feedback/LoadSubmitFeedbackForm?FormID=6240)  
+  
+ You can report a problem with other Visual Studio and .Net Framework products by locating the product in the drop-down on the [Visual Studio and .NET Framework feedback](https://connect.microsoft.com/VisualStudio/feedback/LoadSubmitFeedbackForm) Connect page.  
   
 ##  <a name="generate"></a> Generating Repros  
  A repro is a complete, self-contained code example, that demonstrates the problem you're reporting. A repro is **not** a code snippet—it must be a complete example that builds and runs (or would, except for the errors produced by the problem you're reporting). It should contain all the necessary #include directives, even for the standard headers.  
